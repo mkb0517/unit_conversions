@@ -5,7 +5,7 @@
 import argparse
 
 from src.convert import kilometers_to_miles, miles_to_kilometers,\
-        years_to_minutes, minutes_to_years
+        years_to_minutes, minutes_to_years, f_to_c, c_to_f
 
 
 # Parse command line args
@@ -29,3 +29,11 @@ print("{0} years is {1} minutes".format(args.value, to_minutes))
 # minutes to years
 to_years = minutes_to_years(args.value)
 print("{0} minutes is {1} years".format(args.value, to_years))
+
+# farenheit to celcius
+to_f = f_to_c(args.value)
+print("{0} F is {1} C".format(args.value, to_f))
+
+# celcius to farenheit
+to_c = c_to_f(args.value)
+print("{0} C is {1} F".format(args.value, to_c))

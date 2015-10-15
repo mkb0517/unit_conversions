@@ -3,7 +3,7 @@
 import unittest
 
 from src.convert import kilometers_to_miles, miles_to_kilometers,\
-        years_to_minutes, minutes_to_years
+        years_to_minutes, minutes_to_years, f_to_c, c_to_f
 
 class TestConvert(unittest.TestCase):
 
@@ -24,6 +24,11 @@ class TestConvert(unittest.TestCase):
     def test_minutes_to_years(self):
         self.assertEqual(1, minutes_to_years(525600))
 
+    def test_f_to_c(self):
+        self.assertAlmostEqual(100, f_to_c(212), delta=0.01)
+
+    def test_c_to_f(self):
+        self.assertAlmostEqual(212, c_to_f(100), delta=0.01)
 
 ##########################
 
